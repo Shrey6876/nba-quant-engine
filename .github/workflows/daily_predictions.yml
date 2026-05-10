@@ -1,0 +1,68 @@
+name: "🏀 Daily NBA Predictions"
+
+on:
+  schedule:
+    # Runs every day at 10:00 AM UTC (adjust to your timezone)
+    - cron: '0 10 * * *'
+  workflow_dispatch: # Manual trigger from GitHub UI
+
+jobs:
+  predict:
+    name: "Generate Tomorrow's Projections"
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── Checkout ──────────────────────────────────────────────
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      # ── Python ────────────────────────────────────────────────
+      - name: 🐍 Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      # ── Dependencies ──────────────────────────────────────────
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          playwright install chromium --with-deps
+
+      # ── Database ──────────────────────────────────────────────
+      - name: 🗄️ Initialize database & ingest data
+        run: |
+          python init_db.py
+          python ingest_nba_api.py
+
+      # ── Features ──────────────────────────────────────────────
+      - name: ⚙️ Build feature matrix
+        run: |
+          python feature_engineering.py
+          python build_ultimate_context.py
+          python add_opponent_defense.py
+          python deep_data_engine.py
+
+      # ── Training ──────────────────────────────────────────────
+      - name: 🧠 Train ensemble models
+        run: |
+          python train_model.py
+          python ensemble_model.py
+
+      # ── Injury Intelligence ───────────────────────────────────
+      - name: 🕵️ Scrape latest injury news
+        continue-on-error: true   # Don't fail the whole run if X blocks us
+        run: python injury_scraper.py
+
+      # ── Predictions ──────────────────────────────────────────
+      - name: 🔮 Generate tomorrow's predictions
+        run: python predict_tomorrow.py | tee predictions.txt
+
+      # ── Upload ────────────────────────────────────────────────
+      - name: 📤 Upload predictions artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-predictions-${{ github.run_number }}
+          path: predictions.txt
+          retention-days: 30

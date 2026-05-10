@@ -1,0 +1,23 @@
+{
+    "injuries": [
+        {
+            "player": "LeBron James",
+            "team": "Los Angeles Lakers",
+            "status": "OUT",
+            "usage_beneficiaries": [
+                "Anthony Davis",
+                "D'Angelo Russell"
+            ]
+        },
+        {
+            "player": "Joel Embiid",
+            "team": "Philadelphia 76ers",
+            "status": "OUT",
+            "usage_beneficiaries": [
+                "Tyrese Maxey",
+                "Tobias Harris"
+            ]
+        }
+    ],
+    "LeBron James": "OUT"
+}
