@@ -1,112 +1,63 @@
-==============================================================
-  🏀 NBA QUANT ENGINE — PROJECTIONS FOR 2026-05-11
-==============================================================
+======================================================================
+  🏀 NBA QUANT ENGINE — LIVE PLAYOFF PREDICTIONS: MAY 10, 2026
+======================================================================
 
-  ℹ️  No games in last 7 days. Using latest available data (2026-04-12).
+  ┌────────────────────────────────────────────────────────────────────
+  │  NYK @ PHI — Game 4 (East Semis) | Knicks lead 3-0 | 3:30 PM ET
+  ├────────────────────────────────────────────────────────────────────
+  │
+  │  NEW YORK KNICKS
+  │  ────────────────────────────────────────────────────────────
+  │  Jalen Brunson             PTS  25.1 | REB  3.2 | AST  9.5 | PRA  37.8
+  │  Karl-Anthony Towns        PTS  19.4 | REB 11.3 | AST  4.4 | PRA  35.1
+  │  OG Anunoby                PTS  17.0 | REB  5.4 | AST  2.4 | PRA  24.7  ⚠️ QUESTIONABLE  🎯 UNDER (2.0pt)
+  │  Mikal Bridges             PTS  12.9 | REB  3.2 | AST  3.2 | PRA  19.4
+  │  Josh Hart                 PTS  12.8 | REB  5.1 | AST  3.4 | PRA  21.3
+  │  Miles McBride             PTS   8.1 | REB  2.3 | AST  2.2 | PRA  12.6  🎯 OVER (2.1pt)
+  │  Jose Alvarado             PTS   8.2 | REB  2.7 | AST  2.9 | PRA  13.8
+  │  Jordan Clarkson           PTS   8.0 | REB  2.6 | AST  2.3 | PRA  12.9
+  │
+  │  PHILADELPHIA 76ERS
+  │  ────────────────────────────────────────────────────────────
+  │  Tyrese Maxey              PTS  26.1 | REB  4.8 | AST  6.1 | PRA  36.9
+  │  Paul George               PTS  18.2 | REB  4.7 | AST  3.4 | PRA  26.2
+  │  Joel Embiid               PTS  27.5 | REB  8.5 | AST  5.9 | PRA  41.8  ⚠️ QUESTIONABLE
+  │  Kelly Oubre Jr.           PTS  13.3 | REB  5.8 | AST  1.8 | PRA  20.9
+  │  Andre Drummond            PTS   7.0 | REB  9.0 | AST  2.0 | PRA  18.0
+  │  Quentin Grimes            PTS  13.1 | REB  3.5 | AST  1.9 | PRA  18.6  🎯 OVER (3.6pt)
+  │  VJ Edgecombe              PTS  17.9 | REB  6.0 | AST  4.9 | PRA  28.8
+  │  Kyle Lowry                PTS   3.7 | REB  1.6 | AST  1.1 | PRA   6.4  🎯 OVER (2.2pt)
+  └────────────────────────────────────────────────────────────────────
 
-  📊 98 rotation players loaded
+  ┌────────────────────────────────────────────────────────────────────
+  │  SAS @ MIN — Game 4 (West Semis) | Spurs lead 2-1 | 7:30 PM ET
+  ├────────────────────────────────────────────────────────────────────
+  │
+  │  SAN ANTONIO SPURS
+  │  ────────────────────────────────────────────────────────────
+  │  Victor Wembanyama         PTS  24.6 | REB 12.0 | AST  4.4 | PRA  41.0  🎯 UNDER (3.4pt)
+  │  De'Aaron Fox              PTS  19.0 | REB  3.4 | AST  6.4 | PRA  28.8
+  │  Devin Vassell             PTS  13.6 | REB  4.9 | AST  2.6 | PRA  21.1  🎯 OVER (2.6pt)
+  │  Stephon Castle            PTS  17.0 | REB  6.2 | AST  8.7 | PRA  31.9
+  │  Julian Champagnie         PTS  11.6 | REB  6.3 | AST  2.2 | PRA  20.1
+  │  Tre Jones                 PTS  18.6 | REB  4.2 | AST  5.7 | PRA  28.5  🎯 UNDER (3.9pt)
+  │  Keldon Johnson            PTS  14.3 | REB  5.9 | AST  1.9 | PRA  22.1
+  │
+  │  MINNESOTA TIMBERWOLVES
+  │  ────────────────────────────────────────────────────────────
+  │  Anthony Edwards           PTS  23.5 | REB  4.2 | AST  5.1 | PRA  32.8  ⬆️ (Donte DiVincenzo OUT)
+  │  Rudy Gobert               PTS  12.1 | REB 11.5 | AST  1.9 | PRA  25.4
+  │  Jaden McDaniels           PTS  15.8 | REB  3.9 | AST  2.5 | PRA  22.3  ⬆️ (Donte DiVincenzo OUT)  🎯 UNDER (4.2pt)
+  │  Mike Conley               PTS   7.2 | REB  2.4 | AST  2.9 | PRA  12.4  ⬆️ (Donte DiVincenzo OUT)
+  │  Naz Reid                  PTS  13.4 | REB  6.1 | AST  2.0 | PRA  21.5  ⬆️ (Donte DiVincenzo OUT)
+  │  Nickeil Alexander-Walker  PTS  22.2 | REB  4.2 | AST  3.6 | PRA  30.0  🎯 UNDER (3.8pt)
+  │  Terrence Shannon Jr.      PTS   9.4 | REB  2.2 | AST  2.1 | PRA  13.8  🎯 UNDER (4.1pt)
+  └────────────────────────────────────────────────────────────────────
 
-  AJ Green                  PTS  14.8 | REB  4.2 | AST  2.9 | PRA  21.9  🎯 UNDER (3.7pt edge)
-  Ace Bailey                PTS  16.1 | REB  5.6 | AST  2.4 | PRA  24.1  🎯 UNDER (2.4pt edge)
-  Andrew Wiggins            PTS  14.5 | REB  3.7 | AST  2.7 | PRA  20.9
-  Anthony Gill              PTS  10.7 | REB  3.7 | AST  2.2 | PRA  16.6
-  Ausar Thompson            PTS  10.3 | REB  4.7 | AST  4.5 | PRA  19.5
-  Bam Adebayo               PTS  20.3 | REB 10.8 | AST  5.4 | PRA  36.5
-  Ben Saraf                 PTS  11.2 | REB  3.8 | AST  3.4 | PRA  18.3  🎯 UNDER (2.3pt edge)
-  Bez Mbeng                 PTS  13.1 | REB  4.5 | AST  4.5 | PRA  22.1
-  Brandin Podziemski        PTS  18.4 | REB  3.8 | AST  3.0 | PRA  25.1  🎯 UNDER (3.1pt edge)
-  Brandon Ingram            PTS  21.3 | REB  5.1 | AST  5.0 | PRA  31.4
-  Brandon Miller            PTS  18.8 | REB  4.4 | AST  2.8 | PRA  25.9
-  Brice Sensabaugh          PTS  20.9 | REB  3.9 | AST  4.3 | PRA  29.2  🎯 UNDER (2.6pt edge)
-  Brook Lopez               PTS  12.2 | REB  6.1 | AST  2.1 | PRA  20.5
-  Bub Carrington            PTS  15.1 | REB  2.9 | AST  5.0 | PRA  22.9
-  Cade Cunningham           PTS  20.6 | REB  3.9 | AST  8.3 | PRA  32.7  🎯 OVER (4.6pt edge)
-  Cody Williams             PTS  14.8 | REB  4.3 | AST  4.7 | PRA  23.8
-  Collin Sexton             PTS  18.0 | REB  4.3 | AST  3.4 | PRA  25.8
-  Cooper Flagg              PTS  23.6 | REB  7.5 | AST  5.0 | PRA  36.0  🎯 UNDER (3.9pt edge)
-  Cormac Ryan               PTS  13.0 | REB  3.3 | AST  2.3 | PRA  18.6  🎯 UNDER (4.5pt edge)
-  Daeqwon Plowden           PTS  12.8 | REB  4.0 | AST  2.1 | PRA  18.9  🎯 UNDER (2.2pt edge)
-  Daniss Jenkins            PTS  12.8 | REB  3.6 | AST  5.9 | PRA  22.2
-  Dariq Whitehead           PTS  10.6 | REB  3.7 | AST  1.7 | PRA  16.0  🎯 UNDER (2.4pt edge)
-  Darius Garland            PTS  19.6 | REB  3.6 | AST  5.5 | PRA  28.7
-  Davion Mitchell           PTS  11.6 | REB  3.0 | AST  5.9 | PRA  20.5
-  De'Aaron Fox              PTS  19.0 | REB  3.4 | AST  6.4 | PRA  28.8
-  Deandre Ayton             PTS  12.6 | REB  5.1 | AST  1.6 | PRA  19.3
-  Deni Avdija               PTS  25.7 | REB  6.1 | AST  6.1 | PRA  37.9
-  Derik Queen               PTS  12.7 | REB  7.9 | AST  3.6 | PRA  24.2
-  Derrick Jones Jr.         PTS  10.2 | REB  4.4 | AST  1.9 | PRA  16.5
-  Desmond Bane              PTS  18.0 | REB  3.9 | AST  3.9 | PRA  25.8
-  Devin Carter              PTS  12.7 | REB  5.1 | AST  3.6 | PRA  21.4  🎯 UNDER (3.8pt edge)
-  Devin Vassell             PTS  13.6 | REB  4.9 | AST  2.6 | PRA  21.0  🎯 OVER (2.6pt edge)
-  Donovan Clingan           PTS  13.4 | REB 10.5 | AST  2.2 | PRA  26.1
-  Donte DiVincenzo          PTS  12.9 | REB  3.2 | AST  2.7 | PRA  18.9
-  Drake Powell              PTS   8.2 | REB  3.0 | AST  1.9 | PRA  13.1
-  Duncan Robinson           PTS  13.6 | REB  3.4 | AST  2.4 | PRA  19.5  🎯 UNDER (2.4pt edge)
-  Dylan Harper              PTS  14.4 | REB  4.0 | AST  4.6 | PRA  23.0
-  E.J. Liddell              PTS  10.6 | REB  4.6 | AST  1.9 | PRA  17.2  🎯 UNDER (2.9pt edge)
-  Ethan Thompson            PTS  10.7 | REB  3.7 | AST  2.6 | PRA  17.0
-  Gui Santos                PTS  13.8 | REB  4.3 | AST  3.7 | PRA  21.8
-  Immanuel Quickley         PTS  13.8 | REB  3.4 | AST  4.7 | PRA  21.9  🎯 OVER (3.3pt edge)
-  Ja'Kobe Walter            PTS  10.6 | REB  3.7 | AST  2.1 | PRA  16.4
-  Jahmai Mashack            PTS   9.8 | REB  5.5 | AST  5.0 | PRA  20.3
-  Jaime Jaquez Jr.          PTS  16.3 | REB  4.3 | AST  4.6 | PRA  25.2
-  Jake LaRavia              PTS   9.1 | REB  5.0 | AST  2.2 | PRA  16.3  🎯 OVER (2.1pt edge)
-  Jalen Suggs               PTS  12.7 | REB  3.3 | AST  5.5 | PRA  21.5
-  Jalen Wilson              PTS  10.3 | REB  4.1 | AST  2.7 | PRA  17.2
-  Jamal Shead               PTS   7.8 | REB  2.0 | AST  5.0 | PRA  14.9
-  Jamir Watkins             PTS  10.0 | REB  5.2 | AST  2.0 | PRA  17.3
-  Jeremiah Fears            PTS  17.9 | REB  3.8 | AST  5.4 | PRA  27.2  🎯 UNDER (8.6pt edge)
-  Jericho Sims              PTS  10.1 | REB  8.0 | AST  4.3 | PRA  22.3
-  John Konchar              PTS  10.0 | REB  7.4 | AST  6.2 | PRA  23.7
-  Jordan Miller             PTS  11.2 | REB  3.4 | AST  2.7 | PRA  17.2
-  Jrue Holiday              PTS  15.7 | REB  4.9 | AST  5.4 | PRA  26.1
-  Julian Champagnie         PTS  11.5 | REB  6.3 | AST  2.2 | PRA  20.0
-  Julian Reese              PTS  12.0 | REB  9.6 | AST  2.5 | PRA  24.1
-  Kelly Oubre Jr.           PTS  13.2 | REB  5.8 | AST  1.8 | PRA  20.8
-  Kobe Brown                PTS   8.8 | REB  4.5 | AST  2.7 | PRA  16.1
-  Kon Knueppel              PTS  14.7 | REB  4.7 | AST  3.0 | PRA  22.4
-  Kris Dunn                 PTS   7.7 | REB  3.7 | AST  3.0 | PRA  14.4  🎯 OVER (2.7pt edge)
-  Kristaps Porziņģis        PTS  15.3 | REB  6.1 | AST  2.6 | PRA  24.1
-  LaMelo Ball               PTS  19.9 | REB  5.0 | AST  7.0 | PRA  31.9  🎯 UNDER (6.1pt edge)
-  LeBron James              PTS  26.1 | REB  7.2 | AST  9.0 | PRA  42.2  🎯 OVER (3.1pt edge)
-  Leaky Black               PTS   9.0 | REB  4.7 | AST  2.0 | PRA  15.6
-  Leonard Miller            PTS  14.3 | REB  7.0 | AST  2.5 | PRA  23.8  🎯 UNDER (2.2pt edge)
-  Luke Kennard              PTS  10.7 | REB  4.1 | AST  5.5 | PRA  20.2
-  Malachi Smith             PTS  10.6 | REB  4.7 | AST  4.6 | PRA  20.0
-  Marcus Smart              PTS   9.6 | REB  3.2 | AST  4.0 | PRA  16.8
-  Max Christie              PTS  12.8 | REB  3.3 | AST  2.2 | PRA  18.2
-  Maxime Raynaud            PTS  15.3 | REB  8.6 | AST  2.5 | PRA  26.4  🎯 UNDER (2.7pt edge)
-  Micah Peavy               PTS   7.0 | REB  3.0 | AST  1.8 | PRA  11.8
-  Mikal Bridges             PTS  13.0 | REB  3.3 | AST  3.2 | PRA  19.5
-  Miles Bridges             PTS  15.5 | REB  7.0 | AST  2.9 | PRA  25.4
-  Moussa Diabaté            PTS   8.4 | REB  7.4 | AST  2.4 | PRA  18.1
-  Nikola Jokić              PTS  25.2 | REB 12.8 | AST 10.2 | PRA  48.1
-  Nique Clifford            PTS  13.9 | REB  5.1 | AST  4.0 | PRA  23.0
-  Ousmane Dieng             PTS  12.5 | REB  5.2 | AST  5.4 | PRA  23.1
-  Paolo Banchero            PTS  20.5 | REB  8.0 | AST  5.1 | PRA  33.6
-  Patrick Williams          PTS   9.8 | REB  4.4 | AST  2.6 | PRA  16.9
-  Paul George               PTS  18.1 | REB  4.7 | AST  3.4 | PRA  26.2
-  Precious Achiuwa          PTS  11.4 | REB  7.3 | AST  2.3 | PRA  21.0
-  RJ Barrett                PTS  20.1 | REB  5.6 | AST  3.7 | PRA  29.5
-  Rayan Rupert              PTS  13.8 | REB  6.9 | AST  3.4 | PRA  24.1
-  Rui Hachimura             PTS  12.5 | REB  3.5 | AST  2.1 | PRA  18.0
-  Ryan Nembhard             PTS   8.8 | REB  3.5 | AST  5.5 | PRA  17.8
-  Scoot Henderson           PTS  14.6 | REB  3.4 | AST  3.4 | PRA  21.4
-  Scottie Barnes            PTS  16.5 | REB  4.5 | AST  5.7 | PRA  26.7
-  Stephen Curry             PTS  23.2 | REB  3.4 | AST  4.6 | PRA  31.2  🎯 OVER (2.7pt edge)
-  Stephon Castle            PTS  17.2 | REB  6.2 | AST  8.7 | PRA  32.0
-  Taurean Prince            PTS  12.4 | REB  5.2 | AST  3.2 | PRA  20.8  🎯 UNDER (2.6pt edge)
-  Toumani Camara            PTS  15.5 | REB  4.1 | AST  2.8 | PRA  22.4
-  Tre Jones                 PTS  18.6 | REB  4.2 | AST  5.6 | PRA  28.4  🎯 UNDER (3.9pt edge)
-  Tyler Herro               PTS  20.1 | REB  4.5 | AST  4.9 | PRA  29.4
-  Tyrese Maxey              PTS  27.0 | REB  5.0 | AST  6.7 | PRA  38.7  ⬆️ (Joel Embiid OUT)  🎯 UNDER (2.0pt edge)
-  Tyson Etienne             PTS  10.9 | REB  3.1 | AST  2.8 | PRA  16.8  🎯 UNDER (2.6pt edge)
-  VJ Edgecombe              PTS  17.9 | REB  6.0 | AST  4.9 | PRA  28.8
-  Wendell Carter Jr.        PTS  12.1 | REB  6.0 | AST  1.8 | PRA  19.9
-  Will Riley                PTS  16.3 | REB  4.6 | AST  3.9 | PRA  24.8  🎯 UNDER (2.2pt edge)
+  🏥 Active Injuries:
+     ⚠️ Joel Embiid (Philadelphia 76ers) — QUESTIONABLE | Right hip soreness — listed probable for Game 4, returned Game 3 with 18pts in 35min
+     ⚠️ OG Anunoby (New York Knicks) — QUESTIONABLE | Minor right hamstring strain — day-to-day since Game 2
+     ❌ Donte DiVincenzo (Minnesota Timberwolves) — OUT | Ruptured right Achilles — out for remainder of postseason
 
-──────────────────────────────────────────────────────────────
-  🎯 Actionable edges found: 28
-  ⚙️  Edge threshold: ≥ 2.0 pts  |  Sims: 10,000
-  🏥 Injury config: injuries.json (2 entries)
-==============================================================
+  ⚙️  10,000 Monte Carlo sims | Edge threshold: ≥ 2.0 pts
+======================================================================
