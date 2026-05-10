@@ -29,3 +29,4 @@ Thumbs.db
 
 # Jupyter
 .ipynb_checkpoints/
+.gh-config/
