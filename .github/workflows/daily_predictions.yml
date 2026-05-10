@@ -2,9 +2,12 @@ name: "🏀 Daily NBA Predictions"
 
 on:
   schedule:
-    # Runs every day at 10:00 AM UTC (adjust to your timezone)
+    # Runs every day at 10:00 AM UTC (3:30 PM IST)
     - cron: '0 10 * * *'
   workflow_dispatch: # Manual trigger from GitHub UI
+
+permissions:
+  contents: write   # Needed to push predictions back to the repo
 
 jobs:
   predict:
@@ -52,17 +55,30 @@ jobs:
 
       # ── Injury Intelligence ───────────────────────────────────
       - name: 🕵️ Scrape latest injury news
-        continue-on-error: true   # Don't fail the whole run if X blocks us
+        continue-on-error: true
         run: python injury_scraper.py
 
       # ── Predictions ──────────────────────────────────────────
       - name: 🔮 Generate tomorrow's predictions
-        run: python predict_tomorrow.py | tee predictions.txt
+        run: |
+          mkdir -p predictions
+          python predict_tomorrow.py | tee predictions/latest.txt
+          # Also save a dated copy for historical tracking
+          cp predictions/latest.txt "predictions/$(date +%Y-%m-%d).txt"
 
-      # ── Upload ────────────────────────────────────────────────
-      - name: 📤 Upload predictions artifact
+      # ── Commit predictions back to the repo ──────────────────
+      - name: 📤 Commit & push predictions
+        run: |
+          git config user.name "NBA Quant Bot"
+          git config user.email "bot@nba-quant-engine"
+          git add predictions/
+          git diff --staged --quiet || git commit -m "🏀 Predictions for $(date +%Y-%m-%d)"
+          git push
+
+      # ── Also upload as artifact (backup) ─────────────────────
+      - name: 📎 Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: nba-predictions-${{ github.run_number }}
-          path: predictions.txt
+          path: predictions/latest.txt
           retention-days: 30

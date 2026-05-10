@@ -90,8 +90,8 @@ def main():
     injuries = load_injuries()
 
     # ── Pull the latest feature row per rotation player ──────
-    # We grab every player whose most recent game is within the
-    # last 7 days AND who plays starter-level minutes (ratio > 0.7).
+    # First try last 7 days; if off-season / no games, fall back to
+    # the most recent game date available in the database.
     recent_cutoff = (datetime.date.today() - datetime.timedelta(days=7)).isoformat()
 
     query = f"""
@@ -104,17 +104,30 @@ def main():
     """
     df = pd.read_sql(query, engine)
 
+    # Smart fallback: if no recent data, use the latest game date in the DB
     if df.empty:
-        print("  ⚠️  No recent player data found in feature_store.")
-        print("  Run the data pipeline first: ingest → features → train.")
-        return
+        max_date_row = pd.read_sql("SELECT MAX(game_date) as md FROM feature_store", engine)
+        max_date = max_date_row.iloc[0]['md']
+        if max_date is None:
+            print("  ⚠️  feature_store is empty. Run the data pipeline first.")
+            return
+        print(f"  ℹ️  No games in last 7 days. Using latest available data ({str(max_date)[:10]}).\n")
+        query = f"""
+            SELECT fs.*, p.full_name
+            FROM feature_store fs
+            JOIN players p ON fs.player_id = p.id
+            WHERE fs.game_date = '{max_date}'
+              AND fs.expected_minutes_ratio > 0.7
+            ORDER BY p.full_name
+        """
+        df = pd.read_sql(query, engine)
 
     # Keep only the MOST RECENT row per player
     df = df.drop_duplicates(subset='player_id', keep='first')
     df = df.dropna(subset=FEATURE_COLS)
     df = df.sort_values('full_name')
 
-    print(f"  📊 {len(df)} rotation players loaded (last 7 days)\n")
+    print(f"  📊 {len(df)} rotation players loaded\n")
 
     bet_count = 0
 
