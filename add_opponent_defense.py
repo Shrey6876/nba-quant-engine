@@ -15,17 +15,25 @@ def pull_raw_matchups():
     Pulls raw data directly from NBA API for the 3 seasons to get MATCHUP strings.
     """
     seasons = ["2023-24", "2024-25", "2025-26"]
+    season_types = ["Regular Season", "Playoffs"]
     dfs = []
     
     for season in seasons:
-        print(f"Fetching raw matchup data from nba_api for {season}...")
+      for season_type in season_types:
+        label = f"{season} ({season_type})"
+        print(f"Fetching raw matchup data from nba_api for {label}...")
         try:
-            logs = leaguegamelog.LeagueGameLog(season=season, player_or_team_abbreviation='P')
+            logs = leaguegamelog.LeagueGameLog(
+                season=season,
+                player_or_team_abbreviation='P',
+                season_type_all_star=season_type
+            )
             df = logs.get_data_frames()[0]
-            dfs.append(df)
+            if not df.empty:
+                dfs.append(df)
             time.sleep(1)
         except Exception as e:
-            print(f"Error fetching {season}: {e}")
+            print(f"Error fetching {label}: {e}")
             
     full_df = pd.concat(dfs, ignore_index=True)
     return full_df

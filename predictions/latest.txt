@@ -2,150 +2,108 @@
   🏀 NBA QUANT ENGINE — PROJECTIONS FOR 2026-05-11
 ==========================================================================================
 
-  ℹ️  No games in last 7 days. Using latest available data (2026-04-12).
+  📅 SCHEDULED GAMES (4):
+     • NYK @ PHI  (NYK -1.5)
+     • SAS @ MIN  (SAS -5.5)
+     • DET @ CLE  (DET +3.5)
+     • OKC @ LAL  (OKC -10.5)
 
-  📊 98 rotation players loaded
+  ✅ Data fresh as of 2026-05-09
 
+  📊 41 players loaded from 8 teams
+
+  ┌─────────────────────────────────────────────────────────────────────────────────────┐
+  │  🏀 NYK @ PHI | Spread: PHI +1.5
+  └─────────────────────────────────────────────────────────────────────────────────────┘
   PLAYER                      PTS   LINE    CALL     EDGE │  REB    CALL    │  AST    CALL    │   PRA
   ──────────────────────────────────────────────────────────────────────────────────────
-  AJ Green                     14.9   18.5  🔴 UNDER   -3.6 │  4.2  ⚪ PUSH   │  2.9  ⚪ PUSH   │  22.0
-  Ace Bailey                   16.1   18.5  🔴 UNDER   -2.4 │  5.6  ⚪ PUSH   │  2.4  ⚪ PUSH   │  24.1
-  Andrew Wiggins               14.5   13.5  🟡 o       +1.0 │  3.7  ⚪ PUSH   │  2.8  ⚪ PUSH   │  20.9
-  Anthony Gill                 10.7   11.5  🟡 u       -0.8 │  3.6  ⚪ PUSH   │  2.1  ⚪ PUSH   │  16.5
-  Ausar Thompson               10.2   10.0  ⚪ PUSH    +0.2 │  4.7  ⚪ PUSH   │  4.5  ⚪ PUSH   │  19.5
-  Bam Adebayo                  20.1   19.0  🟡 o       +1.1 │ 10.8  ⚪ PUSH   │  5.5  🟡 u      │  36.4
-  Ben Saraf                    11.4   13.5  🔴 UNDER   -2.1 │  3.8  ⚪ PUSH   │  3.4  🟡 u      │  18.5
-  Bez Mbeng                    13.1   14.0  🟡 u       -0.9 │  4.5  ⚪ PUSH   │  4.5  ⚪ PUSH   │  22.1
-  Brandin Podziemski           18.4   21.5  🔴 UNDER   -3.1 │  3.7  🟡 o      │  3.0  ⚪ PUSH   │  25.1
-  Brandon Ingram               21.3   21.5  ⚪ PUSH    -0.2 │  5.1  ⚪ PUSH   │  5.0  🟡 o      │  31.4
-  Brandon Miller               18.7   19.0  ⚪ PUSH    -0.3 │  4.4  🟡 o      │  2.8  🟡 o      │  25.8
-  Brice Sensabaugh             20.9   23.5  🔴 UNDER   -2.6 │  4.0  🟡 o      │  4.3  ⚪ PUSH   │  29.3
-  Brook Lopez                  12.3   14.0  🟡 u       -1.7 │  6.2  ⚪ PUSH   │  2.1  ⚪ PUSH   │  20.6
-  Bub Carrington               15.0   16.5  🟡 u       -1.5 │  2.8  🟡 o      │  5.1  ⚪ PUSH   │  22.9
-  Cade Cunningham              20.6   16.0  🟢 OVER    +4.6 │  3.9  ⚪ PUSH   │  8.2  ⚪ PUSH   │  32.7
-  Cody Williams                14.9   16.0  🟡 u       -1.1 │  4.3  ⚪ PUSH   │  4.7  ⚪ PUSH   │  24.0
-  Collin Sexton                18.0   18.5  🟡 u       -0.5 │  4.3  ⚪ PUSH   │  3.4  ⚪ PUSH   │  25.7
-  Cooper Flagg                 23.6   27.5  🔴 UNDER   -3.9 │  7.5  ⚪ PUSH   │  5.0  ⚪ PUSH   │  36.1
-  Cormac Ryan                  13.1   17.5  🔴 UNDER   -4.4 │  3.4  🟡 o      │  2.3  ⚪ PUSH   │  18.8
-  Daeqwon Plowden              12.8   15.0  🔴 UNDER   -2.2 │  3.9  ⚪ PUSH   │  2.1  ⚪ PUSH   │  18.9
-  Daniss Jenkins               12.7   13.5  🟡 u       -0.8 │  3.6  ⚪ PUSH   │  5.9  🟡 u      │  22.2
-  Dariq Whitehead              10.6   13.0  🔴 UNDER   -2.4 │  3.6  ⚪ PUSH   │  1.8  ⚪ PUSH   │  16.0
-  Darius Garland               19.5   18.5  🟡 o       +1.0 │  3.6  🟡 o      │  5.5  ⚪ PUSH   │  28.6
-  Davion Mitchell              11.6   12.0  ⚪ PUSH    -0.4 │  3.0  ⚪ PUSH   │  5.8  🟡 u      │  20.4
-  De'Aaron Fox                 19.0   17.5  🟡 o       +1.5 │  3.4  ⚪ PUSH   │  6.4  ⚪ PUSH   │  28.8
-  Deandre Ayton                12.6   12.0  🟡 o       +0.6 │  5.2  ⚪ PUSH   │  1.6  🟡 o      │  19.4
-  Deni Avdija                  25.7   27.5  🟡 u       -1.8 │  6.1  ⚪ PUSH   │  6.1  ⚪ PUSH   │  37.9
-  Derik Queen                  12.7   14.0  🟡 u       -1.3 │  7.9  ⚪ PUSH   │  3.7  ⚪ PUSH   │  24.2
-  Derrick Jones Jr.            10.1    8.5  🟡 o       +1.6 │  4.4  ⚪ PUSH   │  1.9  ⚪ PUSH   │  16.4
-  Desmond Bane                 18.0   16.5  🟡 o       +1.5 │  3.9  ⚪ PUSH   │  3.9  ⚪ PUSH   │  25.8
-  Devin Carter                 12.7   16.5  🔴 UNDER   -3.8 │  5.1  ⚪ PUSH   │  3.6  ⚪ PUSH   │  21.3
-  Devin Vassell                13.7   11.0  🟢 OVER    +2.7 │  4.9  ⚪ PUSH   │  2.6  ⚪ PUSH   │  21.1
-  Donovan Clingan              13.4   12.5  🟡 o       +0.9 │ 10.5  🟡 u      │  2.2  ⚪ PUSH   │  26.1
-  Donte DiVincenzo             13.0   12.5  ⚪ PUSH    +0.5 │  3.2  🟡 o      │  2.8  ⚪ PUSH   │  18.9
-  Drake Powell                  8.3    8.0  ⚪ PUSH    +0.3 │  3.0  ⚪ PUSH   │  1.9  ⚪ PUSH   │  13.2
-  Duncan Robinson              13.8   16.0  🔴 UNDER   -2.2 │  3.4  🟡 o      │  2.4  ⚪ PUSH   │  19.7
-  Dylan Harper                 14.3   14.0  ⚪ PUSH    +0.3 │  4.0  ⚪ PUSH   │  4.7  ⚪ PUSH   │  23.0
-  E.J. Liddell                 10.6   13.5  🔴 UNDER   -2.9 │  4.6  ⚪ PUSH   │  1.9  ⚪ PUSH   │  17.1
-  Ethan Thompson               10.7   12.0  🟡 u       -1.3 │  3.7  ⚪ PUSH   │  2.6  ⚪ PUSH   │  17.0
-  Gui Santos                   13.7   15.5  🟡 u       -1.8 │  4.3  ⚪ PUSH   │  3.7  ⚪ PUSH   │  21.6
-  Immanuel Quickley            13.9   10.5  🟢 OVER    +3.4 │  3.5  ⚪ PUSH   │  4.7  ⚪ PUSH   │  22.1
-  Ja'Kobe Walter               10.4   11.0  🟡 u       -0.6 │  3.7  ⚪ PUSH   │  2.1  ⚪ PUSH   │  16.2
-  Jahmai Mashack                9.8    9.0  🟡 o       +0.8 │  5.4  🟡 u      │  5.0  ⚪ PUSH   │  20.2
-  Jaime Jaquez Jr.             16.3   18.0  🟡 u       -1.7 │  4.3  ⚪ PUSH   │  4.6  ⚪ PUSH   │  25.2
-  Jake LaRavia                  9.1    7.0  🟢 OVER    +2.1 │  5.0  ⚪ PUSH   │  2.2  🟡 o      │  16.3
-  Jalen Suggs                  12.6   12.5  ⚪ PUSH    +0.1 │  3.3  ⚪ PUSH   │  5.5  🟡 u      │  21.4
-  Jalen Wilson                 10.4   11.0  🟡 u       -0.6 │  4.1  ⚪ PUSH   │  2.8  ⚪ PUSH   │  17.2
-  Jamal Shead                   7.9    7.0  🟡 o       +0.9 │  2.0  🟢 OVER   │  5.0  ⚪ PUSH   │  14.9
-  Jamir Watkins                 9.9   10.0  ⚪ PUSH    -0.1 │  5.2  ⚪ PUSH   │  2.0  ⚪ PUSH   │  17.2
-  Jeremiah Fears               17.9   26.5  🔴 UNDER   -8.6 │  3.9  ⚪ PUSH   │  5.4  ⚪ PUSH   │  27.2
-  Jericho Sims                 10.1    9.5  🟡 o       +0.6 │  7.9  🟡 u      │  4.3  ⚪ PUSH   │  22.3
-  John Konchar                 10.1    9.5  🟡 o       +0.6 │  7.5  🟡 u      │  6.2  ⚪ PUSH   │  23.7
-  Jordan Miller                11.1   12.0  🟡 u       -0.9 │  3.4  ⚪ PUSH   │  2.7  ⚪ PUSH   │  17.2
-  Jrue Holiday                 15.7   16.0  ⚪ PUSH    -0.3 │  4.9  🟡 u      │  5.5  🟡 u      │  26.1
-  Julian Champagnie            11.5   10.5  🟡 o       +1.0 │  6.3  ⚪ PUSH   │  2.2  ⚪ PUSH   │  20.0
-  Julian Reese                 12.1   12.5  ⚪ PUSH    -0.4 │  9.7  🟡 u      │  2.5  ⚪ PUSH   │  24.2
-  Kelly Oubre Jr.              13.2   12.5  🟡 o       +0.7 │  5.8  ⚪ PUSH   │  1.8  🟡 o      │  20.8
-  Kobe Brown                    8.9    8.5  ⚪ PUSH    +0.4 │  4.5  🟡 u      │  2.7  ⚪ PUSH   │  16.1
-  Kon Knueppel                 14.6   13.5  🟡 o       +1.1 │  4.8  ⚪ PUSH   │  3.0  ⚪ PUSH   │  22.4
-  Kris Dunn                     7.7    5.0  🟢 OVER    +2.7 │  3.7  ⚪ PUSH   │  3.0  🟡 u      │  14.4
-  Kristaps Porziņģis           15.2   15.0  ⚪ PUSH    +0.2 │  6.1  ⚪ PUSH   │  2.6  🟡 o      │  24.0
-  LaMelo Ball                  20.1   26.0  🔴 UNDER   -5.9 │  4.9  ⚪ PUSH   │  7.0  🟡 u      │  32.0
-  LeBron James                 26.0   23.0  🟢 OVER    +3.0 │  7.2  ⚪ PUSH   │  8.9  🟡 u      │  42.1
-  Leaky Black                   9.0    7.5  🟡 o       +1.5 │  4.7  ⚪ PUSH   │  1.9  ⚪ PUSH   │  15.6
-  Leonard Miller               14.4   16.5  🔴 UNDER   -2.1 │  7.0  🟡 u      │  2.5  ⚪ PUSH   │  23.8
-  Luke Kennard                 10.7   12.5  🟡 u       -1.8 │  4.1  🟡 o      │  5.5  ⚪ PUSH   │  20.2
-  Malachi Smith                10.6   11.5  🟡 u       -0.9 │  4.7  ⚪ PUSH   │  4.5  ⚪ PUSH   │  19.9
-  Marcus Smart                  9.6    8.0  🟡 o       +1.6 │  3.2  🟡 o      │  4.1  🟡 o      │  16.9
-  Max Christie                 12.8   12.5  ⚪ PUSH    +0.3 │  3.3  🟡 o      │  2.2  🟡 o      │  18.3
-  Maxime Raynaud               15.1   18.0  🔴 UNDER   -2.9 │  8.6  ⚪ PUSH   │  2.5  ⚪ PUSH   │  26.2
-  Micah Peavy                   7.0    6.0  🟡 o       +1.0 │  3.0  ⚪ PUSH   │  1.8  ⚪ PUSH   │  11.8
-  Mikal Bridges                13.0   13.0  ⚪ PUSH    -0.0 │  3.3  🟡 o      │  3.2  ⚪ PUSH   │  19.5
-  Miles Bridges                15.6   16.0  ⚪ PUSH    -0.4 │  7.1  ⚪ PUSH   │  2.9  ⚪ PUSH   │  25.5
-  Moussa Diabaté                8.4    6.5  🟡 o       +1.9 │  7.4  ⚪ PUSH   │  2.4  ⚪ PUSH   │  18.1
-  Nikola Jokić                 25.1   25.5  ⚪ PUSH    -0.4 │ 12.8  🔴 UNDER  │ 10.1  🔴 UNDER  │  48.1
-  Nique Clifford               13.8   15.5  🟡 u       -1.7 │  5.2  ⚪ PUSH   │  3.9  🟡 u      │  22.9
-  Ousmane Dieng                12.5   14.0  🟡 u       -1.5 │  5.2  🟡 u      │  5.4  🟡 u      │  23.1
-  Paolo Banchero               20.6   19.5  🟡 o       +1.1 │  8.0  ⚪ PUSH   │  5.1  ⚪ PUSH   │  33.7
-  Patrick Williams              9.9    9.5  ⚪ PUSH    +0.4 │  4.5  ⚪ PUSH   │  2.6  ⚪ PUSH   │  17.0
-  Paul George                  18.2   18.5  ⚪ PUSH    -0.3 │  4.7  ⚪ PUSH   │  3.3  ⚪ PUSH   │  26.3
-  Precious Achiuwa             11.2   12.0  🟡 u       -0.8 │  7.2  ⚪ PUSH   │  2.4  ⚪ PUSH   │  20.8
-  RJ Barrett                   20.0   20.0  ⚪ PUSH    +0.0 │  5.7  ⚪ PUSH   │  3.7  ⚪ PUSH   │  29.5
-  Rayan Rupert                 13.7   14.5  🟡 u       -0.8 │  6.9  🟡 u      │  3.4  ⚪ PUSH   │  24.0
-  Rui Hachimura                12.4   12.5  ⚪ PUSH    -0.1 │  3.4  ⚪ PUSH   │  2.1  🟡 o      │  18.0
-  Ryan Nembhard                 8.9    9.0  ⚪ PUSH    -0.1 │  3.5  ⚪ PUSH   │  5.5  🟡 u      │  17.8
-  Scoot Henderson              14.5   15.0  ⚪ PUSH    -0.5 │  3.4  🟡 o      │  3.3  ⚪ PUSH   │  21.2
-  Scottie Barnes               16.5   15.0  🟡 o       +1.5 │  4.5  🟡 u      │  5.7  ⚪ PUSH   │  26.6
-  Stephen Curry                23.3   20.5  🟢 OVER    +2.8 │  3.4  ⚪ PUSH   │  4.6  🟡 o      │  31.3
-  Stephon Castle               17.1   18.5  🟡 u       -1.4 │  6.2  🟡 u      │  8.7  🟡 u      │  32.0
-  Taurean Prince               12.5   15.0  🔴 UNDER   -2.5 │  5.2  ⚪ PUSH   │  3.2  ⚪ PUSH   │  20.9
-  Toumani Camara               15.4   16.5  🟡 u       -1.1 │  4.1  ⚪ PUSH   │  2.8  ⚪ PUSH   │  22.3
-  Tre Jones                    18.6   22.5  🔴 UNDER   -3.9 │  4.2  ⚪ PUSH   │  5.6  🟡 o      │  28.4
-  Tyler Herro                  19.9   19.0  🟡 o       +0.9 │  4.5  🟡 o      │  4.9  ⚪ PUSH   │  29.3
-  Tyrese Maxey                 26.2   25.0  🟡 o       +1.2 │  4.8  ⚪ PUSH   │  6.0  ⚪ PUSH   │  37.1
-  Tyson Etienne                11.0   13.5  🔴 UNDER   -2.5 │  3.1  ⚪ PUSH   │  2.8  ⚪ PUSH   │  16.9
-  VJ Edgecombe                 17.8   17.0  🟡 o       +0.8 │  6.0  ⚪ PUSH   │  4.9  ⚪ PUSH   │  28.7
-  Wendell Carter Jr.           12.0   11.5  🟡 o       +0.5 │  6.1  ⚪ PUSH   │  1.7  🟡 o      │  19.9
-  Will Riley                   16.3   18.5  🔴 UNDER   -2.2 │  4.6  ⚪ PUSH   │  3.9  ⚪ PUSH   │  24.8
+  Jalen Brunson (NYK)          26.4   27.5  🟡 u       -1.1 │  3.4  🟢 OVER   │  7.3  🟡 o      │  37.1
+  Joel Embiid (PHI)            25.1   25.0  ⚪ PUSH    +0.1 │  7.7  ⚪ PUSH   │  5.1  🟡 o      │  37.9
+  Josh Hart (NYK)              11.0    8.5  🟢 OVER    +2.5 │  6.5  🟡 u      │  4.0  ⚪ PUSH   │  21.5
+  Karl-Anthony Towns (NYK)     19.5   18.0  🟡 o       +1.5 │ 10.3  ⚪ PUSH   │  5.8  🟡 u      │  35.6
+  Kelly Oubre Jr. (PHI)        13.5   12.0  🟡 o       +1.5 │  5.6  ⚪ PUSH   │  1.7  ⚪ PUSH   │  20.8
+  Mikal Bridges (NYK)          12.8   14.0  🟡 u       -1.2 │  3.3  ⚪ PUSH   │  2.5  ⚪ PUSH   │  18.6
+  OG Anunoby (NYK)             17.7   20.5  🔴 UNDER   -2.8 │  6.4  🟡 u      │  2.0  ⚪ PUSH   │  26.0
+  Paul George (PHI)            16.9   17.5  🟡 u       -0.6 │  4.7  ⚪ PUSH   │  3.3  ⚪ PUSH   │  24.8
+  Tyrese Maxey (PHI)           24.8   24.5  ⚪ PUSH    +0.3 │  4.7  ⚪ PUSH   │  5.3  ⚪ PUSH   │  34.8
+  VJ Edgecombe (PHI)           15.5   15.5  ⚪ PUSH    -0.0 │  5.0  ⚪ PUSH   │  3.2  ⚪ PUSH   │  23.7
+
+  ┌─────────────────────────────────────────────────────────────────────────────────────┐
+  │  🏀 SAS @ MIN | Spread: MIN +5.5
+  └─────────────────────────────────────────────────────────────────────────────────────┘
+  PLAYER                      PTS   LINE    CALL     EDGE │  REB    CALL    │  AST    CALL    │   PRA
+  ──────────────────────────────────────────────────────────────────────────────────────
+  Anthony Edwards (MIN)        19.5   16.5  🟢 OVER    +3.0 │  4.6  🟡 o      │  3.2  🟡 o      │  27.4
+  Ayo Dosunmu (MIN)            14.5   16.5  🟡 u       -2.0 │  3.1  🟡 o      │  3.3  ⚪ PUSH   │  20.9
+  De'Aaron Fox (SAS)           18.4   17.5  🟡 o       +0.9 │  3.5  ⚪ PUSH   │  5.4  ⚪ PUSH   │  27.3
+  Devin Vassell (SAS)          13.0   12.0  🟡 o       +1.0 │  5.0  ⚪ PUSH   │  2.8  ⚪ PUSH   │  20.8
+  Dylan Harper (SAS)           12.6   13.5  🟡 u       -0.9 │  4.5  ⚪ PUSH   │  2.9  ⚪ PUSH   │  20.0
+  Jaden McDaniels (MIN)        15.6   17.0  🟡 u       -1.4 │  5.1  ⚪ PUSH   │  2.8  ⚪ PUSH   │  23.5
+  Julian Champagnie (SAS)      12.0   12.5  ⚪ PUSH    -0.5 │  5.0  ⚪ PUSH   │  1.9  ⚪ PUSH   │  18.9
+  Julius Randle (MIN)          19.1   18.0  🟡 o       +1.1 │  6.5  🟡 u      │  3.3  ⚪ PUSH   │  28.8
+  Naz Reid (MIN)               12.7   12.0  🟡 o       +0.7 │  7.1  ⚪ PUSH   │  1.8  ⚪ PUSH   │  21.6
+  Rudy Gobert (MIN)             9.3    7.0  🟢 OVER    +2.3 │  9.0  🟡 u      │  2.5  ⚪ PUSH   │  20.9
+  Stephon Castle (SAS)         17.4   19.0  🟡 u       -1.6 │  4.3  ⚪ PUSH   │  5.1  🟡 u      │  26.9
+  Victor Wembanyama (SAS)      23.6   20.0  🟢 OVER    +3.6 │ 11.7  🟡 u      │  3.4  ⚪ PUSH   │  38.7
+
+  ┌─────────────────────────────────────────────────────────────────────────────────────┐
+  │  🏀 DET @ CLE | Spread: CLE -3.5
+  └─────────────────────────────────────────────────────────────────────────────────────┘
+  PLAYER                      PTS   LINE    CALL     EDGE │  REB    CALL    │  AST    CALL    │   PRA
+  ──────────────────────────────────────────────────────────────────────────────────────
+  Ausar Thompson (DET)          9.9    9.0  🟡 o       +0.9 │  7.6  ⚪ PUSH   │  3.5  ⚪ PUSH   │  21.0
+  Cade Cunningham (DET)        24.5   27.5  🔴 UNDER   -3.0 │  4.3  ⚪ PUSH   │  7.4  🟡 u      │  36.2
+  Donovan Mitchell (CLE)       24.2   25.0  🟡 u       -0.8 │  4.9  ⚪ PUSH   │  3.9  🟡 o      │  33.0
+  Duncan Robinson (DET)        12.9   14.0  🟡 u       -1.1 │  3.5  🟡 o      │  2.5  ⚪ PUSH   │  18.9
+  Evan Mobley (CLE)            18.1   15.0  🟢 OVER    +3.1 │  7.2  ⚪ PUSH   │  3.7  ⚪ PUSH   │  29.0
+  Jalen Duren (DET)            14.4   11.0  🟢 OVER    +3.4 │ 10.3  ⚪ PUSH   │  2.3  ⚪ PUSH   │  27.0
+  James Harden (CLE)           19.5   17.5  🟡 o       +2.0 │  6.2  ⚪ PUSH   │  5.1  ⚪ PUSH   │  30.8
+  Jarrett Allen (CLE)          13.7   13.5  ⚪ PUSH    +0.2 │  8.0  ⚪ PUSH   │  1.8  ⚪ PUSH   │  23.5
+  Max Strus (CLE)               9.8    9.5  ⚪ PUSH    +0.3 │  4.6  ⚪ PUSH   │  2.2  ⚪ PUSH   │  16.6
+  Tobias Harris (DET)          17.2   21.5  🔴 UNDER   -4.3 │  7.0  ⚪ PUSH   │  2.0  🟡 o      │  26.3
+
+  ┌─────────────────────────────────────────────────────────────────────────────────────┐
+  │  🏀 OKC @ LAL | Spread: LAL +10.5
+  └─────────────────────────────────────────────────────────────────────────────────────┘
+  PLAYER                      PTS   LINE    CALL     EDGE │  REB    CALL    │  AST    CALL    │   PRA
+  ──────────────────────────────────────────────────────────────────────────────────────
+  Ajay Mitchell (OKC)          13.5   16.5  🔴 UNDER   -3.0 │  3.6  ⚪ PUSH   │  4.0  🟡 u      │  21.1
+  Austin Reaves (LAL) ⬆️       19.5   23.0  🔴 UNDER   -3.5 │  4.5  ⚪ PUSH   │  5.6  ⚪ PUSH   │  29.6
+  Chet Holmgren (OKC) ⬆️       17.5   23.0  🔴 UNDER   -5.5 │  9.8  🟡 u      │  2.4  ⚪ PUSH   │  29.7
+  Deandre Ayton (LAL)          10.8    9.5  🟡 o       +1.3 │  9.4  🔴 UNDER  │  1.5  ⚪ PUSH   │  21.7
+  LeBron James (LAL)           21.2   24.0  🔴 UNDER   -2.8 │  4.8  ⚪ PUSH   │  6.2  🟡 u      │  32.2
+  Luke Kennard (LAL)            9.4    8.5  🟡 o       +0.9 │  3.3  ⚪ PUSH   │  2.1  ⚪ PUSH   │  14.8
+  Marcus Smart (LAL)           11.5   12.0  🟡 u       -0.5 │  4.0  ⚪ PUSH   │  4.7  ⚪ PUSH   │  20.2
+  Rui Hachimura (LAL)          13.5   16.5  🔴 UNDER   -3.0 │  4.2  ⚪ PUSH   │  2.0  ⚪ PUSH   │  19.7
+  Shai Gilgeous-Alexander (OKC) ⬆️  29.0   30.5  🟡 u       -1.5 │  4.0  🟡 o      │  7.0  🟡 u      │  40.0
+
 
 ==========================================================================================
-  🎯 ACTIONABLE EDGES (30 found)
+  🎯 ACTIONABLE EDGES (16 found)
 ==========================================================================================
   PLAYER                    STAT   LINE   PROJ    EDGE    VERDICT   
   ────────────────────────────────────────────────────────────────────────
-  Jeremiah Fears             PTS   26.5   17.9   -8.6  🔴 UNDER
-  LaMelo Ball                PTS   26.0   20.1   -5.9  🔴 UNDER
-  Cade Cunningham            PTS   16.0   20.6  +  4.6  🟢 OVER
-  Cormac Ryan                PTS   17.5   13.1   -4.4  🔴 UNDER
-  Cooper Flagg               PTS   27.5   23.6   -3.9  🔴 UNDER
-  Tre Jones                  PTS   22.5   18.6   -3.9  🔴 UNDER
-  Devin Carter               PTS   16.5   12.7   -3.8  🔴 UNDER
-  AJ Green                   PTS   18.5   14.9   -3.6  🔴 UNDER
-  Immanuel Quickley          PTS   10.5   13.9  +  3.4  🟢 OVER
-  Brandin Podziemski         PTS   21.5   18.4   -3.1  🔴 UNDER
-  LeBron James               PTS   23.0   26.0  +  3.0  🟢 OVER
-  E.J. Liddell               PTS   13.5   10.6   -2.9  🔴 UNDER
-  Maxime Raynaud             PTS   18.0   15.1   -2.9  🔴 UNDER
-  Stephen Curry              PTS   20.5   23.3  +  2.8  🟢 OVER
-  Devin Vassell              PTS   11.0   13.7  +  2.7  🟢 OVER
-  Kris Dunn                  PTS    5.0    7.7  +  2.7  🟢 OVER
-  Brice Sensabaugh           PTS   23.5   20.9   -2.6  🔴 UNDER
-  Tyson Etienne              PTS   13.5   11.0   -2.5  🔴 UNDER
-  Taurean Prince             PTS   15.0   12.5   -2.5  🔴 UNDER
-  Ace Bailey                 PTS   18.5   16.1   -2.4  🔴 UNDER
-  Dariq Whitehead            PTS   13.0   10.6   -2.4  🔴 UNDER
-  Daeqwon Plowden            PTS   15.0   12.8   -2.2  🔴 UNDER
-  Duncan Robinson            PTS   16.0   13.8   -2.2  🔴 UNDER
-  Will Riley                 PTS   18.5   16.3   -2.2  🔴 UNDER
-  Ben Saraf                  PTS   13.5   11.4   -2.1  🔴 UNDER
-  Leonard Miller             PTS   16.5   14.4   -2.1  🔴 UNDER
-  Jake LaRavia               PTS    7.0    9.1  +  2.1  🟢 OVER
-  Nikola Jokić               AST   12.0   10.1   -1.9  🔴 UNDER
-  Nikola Jokić               REB   14.5   12.8   -1.7  🔴 UNDER
-  Jamal Shead                REB    0.5    2.0  +  1.5  🟢 OVER
+  Chet Holmgren              PTS   23.0   17.5   -5.5  🔴 UNDER [OKC@LAL]
+  Tobias Harris              PTS   21.5   17.2   -4.3  🔴 UNDER [DET@CLE]
+  Victor Wembanyama          PTS   20.0   23.6  +  3.6  🟢 OVER [SAS@MIN]
+  Austin Reaves              PTS   23.0   19.5   -3.5  🔴 UNDER [OKC@LAL]
+  Jalen Duren                PTS   11.0   14.4  +  3.4  🟢 OVER [DET@CLE]
+  Evan Mobley                PTS   15.0   18.1  +  3.1  🟢 OVER [DET@CLE]
+  Rui Hachimura              PTS   16.5   13.5   -3.0  🔴 UNDER [OKC@LAL]
+  Anthony Edwards            PTS   16.5   19.5  +  3.0  🟢 OVER [SAS@MIN]
+  Cade Cunningham            PTS   27.5   24.5   -3.0  🔴 UNDER [DET@CLE]
+  Ajay Mitchell              PTS   16.5   13.5   -3.0  🔴 UNDER [OKC@LAL]
+  LeBron James               PTS   24.0   21.2   -2.8  🔴 UNDER [OKC@LAL]
+  OG Anunoby                 PTS   20.5   17.7   -2.8  🔴 UNDER [NYK@PHI]
+  Josh Hart                  PTS    8.5   11.0  +  2.5  🟢 OVER [NYK@PHI]
+  Rudy Gobert                PTS    7.0    9.3  +  2.3  🟢 OVER [SAS@MIN]
+  Jalen Brunson              REB    1.5    3.4  +  1.9  🟢 OVER [NYK@PHI]
+  Deandre Ayton              REB   11.0    9.4   -1.6  🔴 UNDER [OKC@LAL]
 
 ──────────────────────────────────────────────────────────────────────────────────────────
   LEGEND:  🟢 OVER (strong)  🔴 UNDER (strong)  🟡 o/u (lean)  ⚪ PUSH (no edge)
-           ⬆️ = usage boost (teammate OUT)  ⚠️ = player QUESTIONABLE
+           ⬆️ = usage boost (teammate OUT)  ⚠️ = player QUESTIONABLE  📉 = blowout penalty
   CONFIG:  Sims: 10,000  |  PTS edge ≥ 2.0pt  |  REB/AST edge ≥ 1.5pt
-  INJURY:  injuries.json (3 entries)
+  DATA:    Feature store through 2026-05-09  |  Injuries: 5 entries
+  GAMES:   4 scheduled
 ==========================================================================================

@@ -1,25 +1,40 @@
 {
     "injuries": [
         {
-            "player": "Joel Embiid",
-            "team": "Philadelphia 76ers",
-            "status": "QUESTIONABLE",
-            "note": "Right hip soreness — listed probable for Game 4, returned Game 3 with 18pts in 35min",
-            "usage_beneficiaries": ["Tyrese Maxey", "Paul George", "Kelly Oubre Jr."]
-        },
-        {
-            "player": "OG Anunoby",
-            "team": "New York Knicks",
-            "status": "QUESTIONABLE",
-            "note": "Minor right hamstring strain — day-to-day since Game 2",
-            "usage_beneficiaries": ["Jalen Brunson", "Karl-Anthony Towns", "Mikal Bridges", "Josh Hart"]
-        },
-        {
-            "player": "Donte DiVincenzo",
-            "team": "Minnesota Timberwolves",
+            "player": "Luka Doncic",
+            "team": "Los Angeles Lakers",
             "status": "OUT",
-            "note": "Ruptured right Achilles — out for remainder of postseason",
-            "usage_beneficiaries": ["Anthony Edwards", "Mike Conley", "Naz Reid", "Jaden McDaniels"]
+            "reason": "Left hamstring strain",
+            "usage_beneficiaries": ["Anthony Davis", "Austin Reaves", "D'Angelo Russell"]
+        },
+        {
+            "player": "Jalen Williams",
+            "team": "Oklahoma City Thunder",
+            "status": "OUT",
+            "reason": "Left hamstring strain",
+            "usage_beneficiaries": ["Shai Gilgeous-Alexander", "Luguentz Dort", "Chet Holmgren"]
+        },
+        {
+            "player": "Jarred Vanderbilt",
+            "team": "Los Angeles Lakers",
+            "status": "QUESTIONABLE",
+            "reason": "Finger dislocation",
+            "usage_beneficiaries": []
+        },
+        {
+            "player": "Kevin Huerter",
+            "team": "Detroit Pistons",
+            "status": "DOUBTFUL",
+            "reason": "Left adductor strain",
+            "usage_beneficiaries": []
+        },
+        {
+            "player": "Sam Merrill",
+            "team": "Cleveland Cavaliers",
+            "status": "QUESTIONABLE",
+            "reason": "Left hamstring strain",
+            "usage_beneficiaries": []
         }
-    ]
+    ],
+    "last_updated": "2026-05-10"
 }

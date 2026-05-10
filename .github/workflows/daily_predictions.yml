@@ -43,8 +43,8 @@ jobs:
       - name: ⚙️ Build feature matrix
         run: |
           python feature_engineering.py
-          python build_ultimate_context.py
           python add_opponent_defense.py
+          python build_ultimate_context.py
           python deep_data_engine.py
 
       # ── Training ──────────────────────────────────────────────
@@ -60,6 +60,8 @@ jobs:
 
       # ── Predictions ──────────────────────────────────────────
       - name: 🔮 Generate tomorrow's predictions
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
           mkdir -p predictions
           python predict_tomorrow.py | tee predictions/latest.txt
