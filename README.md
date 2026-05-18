@@ -138,70 +138,86 @@ nba_quant_engine/
 
 ---
 
-## 🚀 Quick Start
+## 🛠️ End-to-End Setup Plan
+
+Welcome to the NBA Quant Engine. Please note: **This system requires a full historical data load and model training on your first run.** We do not ship the SQLite database or trained models in the repository to keep it lightweight.
 
 ### Prerequisites
 
 - Python 3.12+
-- A free API key from [The Odds API](https://the-odds-api.com/) (optional, for live lines)
+- A free API key from [The Odds API](https://the-odds-api.com/) (required for live lines and predictions)
 
-### Installation
+### 1. Installation
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/<your-username>/nba-quant-engine.git
+# Clone the repository
+git clone https://github.com/Shrey6876/nba-quant-engine.git
 cd nba-quant-engine
 
-# 2. Create & activate virtual environment
+# Create & activate virtual environment
 python3 -m venv venv
 source venv/bin/activate    # macOS/Linux
+# .\venv\Scripts\activate   # Windows
 
-# 3. Install dependencies
+# Install Python dependencies
 pip install -r requirements.txt
+
+# Install Playwright browser (needed for injury scraper)
 playwright install chromium
 
-# 4. Set up environment variables
+# Set up environment variables
 cp .env.example .env
-# Edit .env and add your ODDS_API_KEY
+# IMPORTANT: Edit .env and add your ODDS_API_KEY
 ```
 
-### First Run
+### 2. First Run (Data Ingestion & Training)
+
+**⚠️ Warning:** The initial run will fetch thousands of historical games from the `nba_api`. This process may take 10-20 minutes depending on your internet connection and API rate limits.
 
 ```bash
 # Step 1: Initialize the database & ingest historical data
-# Note: The repo includes a pre-built nba_quant.db. You can skip Step 1 & 2 if you just want to run daily predictions.
 python init_db.py
 python ingest_nba_api.py
 
-# Step 2: Build the feature matrix
+# Step 2: Build the deep feature matrix
 python feature_engineering.py
-python build_ultimate_context.py
 python add_opponent_defense.py
+python build_ultimate_context.py
 python deep_data_engine.py
 
-# Step 3: Train the models
+# Step 3: Train the Machine Learning models
+# This will create a models/ directory and save .joblib files
 python train_model.py
-python ensemble_model.py
-
-# Step 4: Run the backtester to verify performance
-python backtester.py
 ```
 
-### Daily Usage (Getting Tomorrow's Predictions)
+### 3. Daily Usage (Getting Tomorrow's Predictions)
+
+Once the initial setup is complete, you only need to run the daily update scripts. Our ingestion scripts are **incremental** — they will only fetch games that have occurred since your last run.
 
 ```bash
 # Activate the environment
 source venv/bin/activate
 
-# Pull latest injury news from X/Twitter (requires Playwright chromium)
+# 1. Update the database with last night's games (Incremental)
+python ingest_nba_api.py
+
+# 2. Rebuild the latest features for the new games
+python feature_engineering.py
+python add_opponent_defense.py
+python build_ultimate_context.py
+python deep_data_engine.py
+
+# 3. Pull latest injury news from X/Twitter
 python injury_scraper.py
 
-# Fetch real sportsbook lines for tomorrow's games
+# 4. Fetch real sportsbook lines for tomorrow's games
 python ingest_player_props.py
 
-# Generate tomorrow's player prop projections
+# 5. Generate tomorrow's player prop projections
 python predict_tomorrow.py
 ```
+
+*Pro Tip: You can create a shell alias to run the daily usage commands with a single word.*
 
 ---
 
