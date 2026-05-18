@@ -103,7 +103,7 @@ nba_quant_engine/
 │   ├── schema.py                  # ORM models (Player, Game, Logs, etc.)
 │   ├── init_db.py                 # Database initialization
 │   ├── ingest_nba_api.py          # NBA API data ingestion (multi-season)
-│   └── ingest_odds_api.py         # The Odds API live line scraper
+│   └── ingest_player_props.py     # The Odds API live line scraper
 │
 ├── ⚙️ Feature Engineering
 │   ├── feature_engineering.py     # EMA, volatility, rest days, baselines
@@ -169,6 +169,7 @@ cp .env.example .env
 
 ```bash
 # Step 1: Initialize the database & ingest historical data
+# Note: The repo includes a pre-built nba_quant.db. You can skip Step 1 & 2 if you just want to run daily predictions.
 python init_db.py
 python ingest_nba_api.py
 
@@ -192,8 +193,11 @@ python backtester.py
 # Activate the environment
 source venv/bin/activate
 
-# Pull latest injury news from X/Twitter
+# Pull latest injury news from X/Twitter (requires Playwright chromium)
 python injury_scraper.py
+
+# Fetch real sportsbook lines for tomorrow's games
+python ingest_player_props.py
 
 # Generate tomorrow's player prop projections
 python predict_tomorrow.py

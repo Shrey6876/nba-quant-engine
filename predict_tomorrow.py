@@ -81,7 +81,7 @@ def ev_pct(model_prob, odds):
 
 # ── Data loaders ─────────────────────────────────────────────────────────
 
-def fetch_upcoming_games():
+def fetch_upcoming_games(target_date):
     if not ODDS_API_KEY: return []
     url = f"https://api.the-odds-api.com/v4/sports/basketball_nba/odds/?regions=us&markets=h2h,spreads&oddsFormat=american&apiKey={ODDS_API_KEY}"
     try:
@@ -89,6 +89,16 @@ def fetch_upcoming_games():
         games = resp.json()
         upcoming = []
         for g in games:
+            commence = g.get('commence_time', '')
+            try:
+                # Convert from UTC to EST (subtract 5 hours) to match US game dates
+                dt_utc = datetime.datetime.fromisoformat(commence.replace("Z", "+00:00"))
+                dt_est = dt_utc - datetime.timedelta(hours=5)
+                if dt_est.date() != target_date:
+                    continue
+            except:
+                pass
+                
             home, away = g['home_team'], g['away_team']
             spread = 0.0
             for bk in g.get('bookmakers', []):
@@ -168,7 +178,7 @@ def verdict_str(ev, direction):
 
 def main():
     tomorrow = datetime.date.today() + datetime.timedelta(days=1)
-    upcoming_games = fetch_upcoming_games()
+    upcoming_games = fetch_upcoming_games(tomorrow)
     real_lines = load_real_lines()
     has_real_lines = not real_lines.empty
 
