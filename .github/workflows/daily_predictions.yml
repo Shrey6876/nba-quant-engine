@@ -33,11 +33,67 @@ jobs:
           pip install -r requirements.txt
           playwright install chromium --with-deps
 
-      # ── Database ──────────────────────────────────────────────
-      - name: 🗄️ Initialize database & ingest data
+      # ── Database Cache ────────────────────────────────────────
+      # Persist the SQLite DB between daily runs so we only ingest
+      # incremental game data (~30s) instead of full history (~10min).
+      # Cache key uses the week number so it auto-refreshes every Monday.
+      - name: 💾 Restore database cache
+        uses: actions/cache@v4
+        with:
+          path: nba_quant.db
+          key: nba-db-${{ runner.os }}-week-${{ steps.date.outputs.week }}
+          restore-keys: |
+            nba-db-${{ runner.os }}-week-
+            nba-db-${{ runner.os }}-
+
+      - name: 📅 Get week number for cache key
+        id: date
+        run: echo "week=$(date +%V)" >> $GITHUB_OUTPUT
+
+      # ── Database Init ─────────────────────────────────────────
+      # init_db.py is idempotent — creates tables only if they don't exist.
+      - name: 🗄️ Initialize database tables
+        run: python init_db.py
+
+      # ── DB Health Check (before ingestion) ───────────────────
+      - name: 🔍 DB health check (pre-ingestion)
         run: |
-          python init_db.py
-          python ingest_nba_api.py
+          python -c "
+          import sqlite3, datetime
+          try:
+              conn = sqlite3.connect('nba_quant.db')
+              row = conn.execute('SELECT MAX(game_date) as md, COUNT(*) as n FROM games').fetchone()
+              max_date, n_games = row
+              if max_date:
+                  days_stale = (datetime.date.today() - datetime.date.fromisoformat(max_date[:10])).days
+                  print(f'  📊 DB: {n_games} games, max_date={max_date} ({days_stale} days ago)')
+              else:
+                  print('  ⚠️  DB is empty — will run full ingestion')
+              conn.close()
+          except Exception as e:
+              print(f'  ⚠️  DB check failed: {e} — will init fresh')
+          "
+
+      # ── Incremental Data Ingestion ────────────────────────────
+      # Only fetches games since the last ingested date (~30s).
+      # Falls back to full ingestion automatically if DB is empty.
+      - name: 📥 Ingest latest NBA game data (incremental)
+        run: python ingest_nba_api.py
+
+      # ── DB Health Check (after ingestion) ────────────────────
+      - name: 🔍 DB health check (post-ingestion)
+        run: |
+          python -c "
+          import sqlite3, datetime
+          conn = sqlite3.connect('nba_quant.db')
+          row = conn.execute('SELECT MAX(game_date) as md, COUNT(*) as n FROM games').fetchone()
+          max_date, n_games = row
+          days_stale = (datetime.date.today() - datetime.date.fromisoformat(max_date[:10])).days if max_date else 999
+          print(f'  ✅ DB: {n_games} games | max_date={max_date} | {days_stale} days ago')
+          if days_stale > 3:
+              print(f'  ⚠️  WARNING: Data is {days_stale} days stale — predictions may be outdated')
+          conn.close()
+          "
 
       # ── Features ──────────────────────────────────────────────
       - name: ⚙️ Build feature matrix
@@ -58,9 +114,10 @@ jobs:
         continue-on-error: true
         run: python injury_scraper.py
 
-      # ── Live Prop Lines (Sportsbook) ─────────────────────────────────
+      # ── Live Prop Lines (Sportsbook) ─────────────────────────
+      # continue-on-error: Odds API outages should NOT block predictions
       - name: 📈 Fetch live player prop lines
-        continue-on-error: true   # Odds API outages should NOT block predictions
+        continue-on-error: true
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python ingest_player_props.py

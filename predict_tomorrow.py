@@ -236,49 +236,22 @@ def main():
         if c in df.columns:
             df[c] = df[c].fillna(0)
 
-    # Filter to playing teams
-    if playing_abbrs:
-        try:
-            from nba_api.stats.endpoints import leaguegamelog
-            # Auto-detect current NBA season (season flips in October)
-            today = datetime.date.today()
-            season_year = today.year if today.month >= 10 else today.year - 1
-            current_season = f"{season_year}-{str(season_year + 1)[-2:]}"
-            # Playoffs run Apr–Jun; Regular Season otherwise
-            in_playoffs = (today.month >= 4 and today.month <= 6)
-            season_type = "Playoffs" if in_playoffs else "Regular Season"
-            print(f"  🗓️  Season: {current_season} | Type: {season_type}")
-            logs = leaguegamelog.LeagueGameLog(
-                season=current_season,
-                player_or_team_abbreviation='P',
-                season_type_all_star=season_type
-            )
-            roster_df = logs.get_data_frames()[0].sort_values('GAME_DATE', ascending=False)
-            # Fallback to Regular Season if playoffs returned no data
-            if roster_df.empty and in_playoffs:
-                print("  ⚠️  Playoffs data empty, falling back to Regular Season roster")
-                logs = leaguegamelog.LeagueGameLog(
-                    season=current_season,
-                    player_or_team_abbreviation='P',
-                    season_type_all_star='Regular Season'
-                )
-                roster_df = logs.get_data_frames()[0].sort_values('GAME_DATE', ascending=False)
-            player_team = roster_df.drop_duplicates(subset='PLAYER_ID', keep='first')[['PLAYER_ID', 'TEAM_ABBREVIATION']]
-            player_team = player_team.rename(columns={'PLAYER_ID': 'player_id', 'TEAM_ABBREVIATION': 'team_abbr'})
-            player_team['player_id'] = player_team['player_id'].astype(int)
-            df = df.merge(player_team, on='player_id', how='left')
-            df_playing = df[df['team_abbr'].isin(playing_abbrs)].copy()
-            if len(df_playing) > 0:
-                df = df_playing
-                print(f"  📊 {len(df)} players loaded from {len(playing_abbrs)} teams\n")
-            else:
-                print(f"  ⚠️  No players matched to playing teams {playing_abbrs}. Showing all.")
-                df['team_abbr'] = 'UNK'
-        except Exception as e:
-            print(f"  ⚠️  Team filtering error: {e}")
+    # Use team_abbr from the feature store (preserved by feature_engineering.py).
+    # The query above orders by game_date DESC + drop_duplicates(player_id) so each
+    # player's row reflects their MOST RECENT team assignment — no API call needed.
+    if 'team_abbr' in df.columns and playing_abbrs:
+        df_playing = df[df['team_abbr'].isin(playing_abbrs)].copy()
+        if len(df_playing) > 0:
+            df = df_playing
+            print(f"  📊 {len(df)} players matched to today's {len(playing_abbrs)} playing teams\n")
+        else:
+            print(f"  ⚠️  No players matched playing teams {playing_abbrs}.")
+            print(f"      Feature store max_date={max_date} ({days_stale}d ago). Run ingest to refresh.")
             df['team_abbr'] = 'UNK'
     else:
-        df['team_abbr'] = 'UNK'
+        if 'team_abbr' not in df.columns:
+            print("  ⚠️  team_abbr not in feature store. Re-run feature_engineering.py to rebuild.")
+        df['team_abbr'] = df.get('team_abbr', 'UNK')
 
     strong_bets = []
 

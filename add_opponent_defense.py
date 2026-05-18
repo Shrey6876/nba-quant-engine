@@ -10,14 +10,42 @@ load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./nba_quant.db")
 engine = create_engine(DATABASE_URL)
 
-def pull_raw_matchups():
+import sys
+import datetime
+
+def get_current_season() -> str:
+    """Auto-detect the current NBA season string (e.g. '2025-26')."""
+    today = datetime.date.today()
+    year = today.year if today.month >= 10 else today.year - 1
+    return f"{year}-{str(year + 1)[-2:]}"
+
+
+def pull_raw_matchups(incremental: bool = False):
     """
-    Pulls raw data directly from NBA API for the 3 seasons to get MATCHUP strings.
+    Pulls raw data directly from NBA API for matchup strings.
+    incremental=True: Only pulls the current season (fast, for daily CI).
+    incremental=False: Pulls last 3 seasons (for full rebuild).
     """
-    seasons = ["2023-24", "2024-25", "2025-26"]
-    season_types = ["Regular Season", "Playoffs"]
+    today = datetime.date.today()
+    current_season = get_current_season()
+
+    if incremental:
+        season_year = int(current_season.split("-")[0])
+        seasons = [current_season]
+        # During playoffs (Apr-Jun), query both types; otherwise just Regular Season
+        season_types = ["Regular Season", "Playoffs"] if 4 <= today.month <= 6 else ["Regular Season"]
+    else:
+        season_year = int(current_season.split("-")[0])
+        seasons = [
+            f"{season_year - 2}-{str(season_year - 1)[-2:]}",
+            f"{season_year - 1}-{str(season_year)[-2:]}",
+            current_season,
+        ]
+        season_types = ["Regular Season", "Playoffs"]
+
+    print(f"  Seasons: {seasons} | Types: {season_types}")
     dfs = []
-    
+
     for season in seasons:
       for season_type in season_types:
         label = f"{season} ({season_type})"
@@ -34,7 +62,9 @@ def pull_raw_matchups():
             time.sleep(1)
         except Exception as e:
             print(f"Error fetching {label}: {e}")
-            
+
+    if not dfs:
+        return pd.DataFrame()
     full_df = pd.concat(dfs, ignore_index=True)
     return full_df
 
@@ -79,25 +109,33 @@ def calculate_opponent_defense(raw_df):
     
     return merged[['player_id', 'game_id', 'Opponent', 'opp_def_rating_10']]
 
-def update_feature_store():
+def update_feature_store(incremental: bool = False):
     print("Loading existing feature store...")
     feature_df = pd.read_sql("SELECT * FROM feature_store", engine)
     feature_df['game_date'] = pd.to_datetime(feature_df['game_date'])
-    
-    raw_df = pull_raw_matchups()
+
+    raw_df = pull_raw_matchups(incremental=incremental)
+    if raw_df.empty:
+        print("  ⚠️  No matchup data fetched. Skipping opponent defense update.")
+        return
     opp_def_df = calculate_opponent_defense(raw_df)
-    
+
     print("Merging Opponent Defense into the Heavy Matrix...")
-    # Merge on player_id and game_id
-    # feature_store has player_id and game_id
     final_df = pd.merge(feature_df, opp_def_df, on=['player_id', 'game_id'], how='left')
-    
-    # Drop rows where we couldn't calculate def rating (first few games of season)
-    final_df = final_df.dropna(subset=['opp_def_rating_10'])
-    
+
+    # Only drop rows missing opp_def_rating when it's a full rebuild.
+    # In incremental mode, existing rows already have it — only new rows may lack it.
+    if not incremental:
+        final_df = final_df.dropna(subset=['opp_def_rating_10'])
+    else:
+        # Fill NaN for new rows with league average (110)
+        final_df['opp_def_rating_10'] = final_df['opp_def_rating_10'].fillna(110.0)
+
     print("Overwriting feature_store with new Opponent context...")
     final_df.to_sql('feature_store', engine, if_exists='replace', index=False)
     print("Done! The Matrix is now complete.")
 
+
 if __name__ == "__main__":
-    update_feature_store()
+    incremental_mode = "--full" not in sys.argv
+    update_feature_store(incremental=incremental_mode)
