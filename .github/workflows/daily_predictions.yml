@@ -58,6 +58,13 @@ jobs:
         continue-on-error: true
         run: python injury_scraper.py
 
+      # ── Live Prop Lines (Sportsbook) ─────────────────────────────────
+      - name: 📈 Fetch live player prop lines
+        continue-on-error: true   # Odds API outages should NOT block predictions
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python ingest_player_props.py
+
       # ── Predictions ──────────────────────────────────────────
       - name: 🔮 Generate tomorrow's predictions
         env:
